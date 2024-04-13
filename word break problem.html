@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str= "abhay";
+        console.log("stingsort",str.split("").sort().join(""))
+        // Function to check if the given word can be broken down into words from the wordList
+        function wordBreak(wordList, word) {
+            // If the word is empty, it can be broken down into an empty list of words
+            if (word === '') {
+                console.log("abhay")
+                return true;
+            }
+
+            const wordLen = word.length;
+
+            // Check if the word can be broken down into words from the wordList
+            for (let i = 1; i <= wordLen; i++) {
+                const prefix = word.substring(0, i);
+
+                if (wordList.includes(prefix) && wordBreak(wordList, word.substr(i))) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        // Main function
+        function main() {
+            const wordList = [
+                "mobile", "samsung", "sam", "sung", "man",
+                "mango", "icecream", "and", "go", "i",
+                "like", "ice", "cream"
+            ];
+
+            const result = wordBreak(wordList, "ilikesamsung");
+
+            console.log(result); // Output: true
+        }
+
+        // Call the main function
+        main();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function timeToMinutes(time) {
+            const [hours, minutes] = time.split(':');
+            return parseInt(hours, 10) * 60 + parseInt(minutes, 10);
+        }
+
+        function findMinDifference(timePoints) {
+            const minutes = timePoints.map(timeToMinutes);
+            minutes.sort((a, b) => a - b);
+
+            let minDifference = Infinity;
+            for (let i = 1; i < minutes.length; i++) {
+                const difference = minutes[i] - minutes[i - 1];
+                minDifference = Math.min(minDifference, difference);
+            }
+
+            // Consider the circular nature of time (e.g., the difference between the last and first time points)
+            const circularDifference = 24 * 60 - (minutes[minutes.length - 1] - minutes[0]);
+            minDifference = Math.min(minDifference, circularDifference);
+
+            return minDifference;
+        }
+
+        // Example usage
+        const timePoints = ["23:59", "00:00", "12:00"];
+        const minDifference = findMinDifference(timePoints);
+        console.log("Minimum minutes difference:", minDifference);
+
+    </script>
+</body>
+
+</html>

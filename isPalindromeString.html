@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = 'A man, a plan, a canal, Panama!'
+        // Remove non-alphanumeric characters and convert to lowercase
+        var str1 = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+        console.log("updatedString", str1.length)
+        // var num = 1331;
+        // console.log("modulo",num/10)
+
+        function isPalindrome(str) {
+            // Remove non-alphanumeric characters and convert to lowercase
+            str = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+            // Check if the characters of the original string match with reversed string
+            for (let i = 0; i < Math.floor(str.length / 2); i++) {
+                if (str[i] !== str[str.length - 1 - i]) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // Test the function
+        const testString = "A man, a plan, a canal, Panama!";
+        console.log(isPalindrome(testString)); // Output: true
+
+
+    </script>
+</body>
+
+</html>

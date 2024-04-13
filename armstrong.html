@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sum = 0;
+        let N = 371;
+        let duplicate = N;
+        while (N > 0) {
+            let lastdigit = N % 10;
+            sum = sum + (lastdigit * lastdigit * lastdigit);
+            N = Math.floor(N / 10);
+
+        }
+        console.log('armstrong', sum)
+        if (sum == duplicate) {
+            console.log('yes it is armstrong');
+        } else {
+            console.log('no  it is not armstrong');
+        }
+    </script>
+</body>
+
+</html>

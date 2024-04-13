@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let N = 36;
+        let squareRootOfN = Math.sqrt(N);
+        console.log("squareroot",squareRootOfN)
+        let count = 0;
+
+        for (let i = 1; i <= squareRootOfN; i++) {
+
+            if (N % i == 0) {
+                count++;
+                console.log(`divisor of ${N} is ${i}`)
+                if (N / i !== i) {
+                    count++;
+                    console.log(`divisor of ${N} is ${N / i}`)
+                }
+            }
+
+        }
+        if (count == 2) {
+            console.log('it is prime number');
+        } else {
+            console.log('it is not prime number');
+        }
+    </script>
+</body>
+
+</html>

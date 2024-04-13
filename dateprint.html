@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let date = new Date();
+        console.log("date", date.getFullYear())
+        console.log("date", new Date())
+        console.log("date", Date.now())
+
+        const createdAtTime = new Date('2024-03-11T04:59:38.152+00:00'); // Convert the string to a Date object
+
+        // Get the current time
+        const currentTime = new Date();
+
+        console.log("currenttime",currentTime)
+        console.log("createdat",createdAtTime)
+        // Calculate the time difference in milliseconds
+        const timeDifferenceInMilliseconds = currentTime - createdAtTime;
+
+        console.log("Time difference in milliseconds:", timeDifferenceInMilliseconds);
+
+
+    </script>
+</body>
+
+</html>

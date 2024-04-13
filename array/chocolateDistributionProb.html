@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function chocolateDistribution(chocolates, children) {
+            if (chocolates.length < children) {
+                return -1; // Not enough chocolates to distribute
+            }
+
+            chocolates.sort((a, b) => a - b);
+            console.log("chocolates",chocolates)
+
+            let minDifference = Infinity;
+
+            for (let i = 0; i + children - 1 < chocolates.length; i++) {
+                let difference = chocolates[i + children - 1] - chocolates[i];
+                if (difference < minDifference) {
+                    minDifference = difference;
+                }
+            }
+
+            return minDifference;
+        }
+
+        // Example usage:
+        const chocolates = [7, 3, 2, 4, 9, 12, 56];
+        const children = 3;
+        const minDifference = chocolateDistribution(chocolates, children);
+        console.log("Minimum difference:", minDifference);
+
+    </script>
+</body>
+
+</html>

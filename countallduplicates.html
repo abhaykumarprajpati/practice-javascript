@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function findDuplicates(str) {
+            const charCount = {};
+            const duplicates = {};
+
+            for (let char of str) {
+                
+                charCount[char] = (charCount[char] || 0) + 1;
+            }
+
+            for (let char in charCount) {
+                if (charCount[char] > 1) {
+                    duplicates[char] = charCount[char];
+                }
+            }
+
+            return duplicates;
+        }
+
+        const string = "hello world";
+        const duplicates = findDuplicates(string);
+        console.log("Duplicate characters and their counts:", duplicates);
+
+
+
+    </script>
+</body>
+
+</html>

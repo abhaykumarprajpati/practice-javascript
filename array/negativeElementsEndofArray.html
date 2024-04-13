@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Input:
+        // n = 8
+        // arr[] = { 1, - 1, 3, 2, -7, -5, 11, 6 }
+        // Output:
+        // 1  3  2  11  6 - 1 - 7 - 5
+        let resultedArray1 = [];
+        let resultedArray2 = [];
+        function shiftNegtoEnd(arr) {
+
+            for (let index = 0; index < arr.length; index++) {
+               if (arr[index] > 0) {
+                resultedArray1.push(arr[index])
+               } else {
+                resultedArray2.push(arr[index])
+               }
+                
+            }
+            return [...resultedArray1,...resultedArray2].join(" ")
+
+        }
+
+        const array = [1, - 1, 3, 2, -7, -5, 11, 6];
+        const result = shiftNegtoEnd(array);
+        console.log('resultedArray',result)
+    </script>
+</body>
+
+</html>

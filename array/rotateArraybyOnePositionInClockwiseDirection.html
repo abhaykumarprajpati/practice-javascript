@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Input:
+        // N = 5
+        // A[] = { 1, 2, 3, 4, 5}
+        // Output:
+        // 5 1 2 3 4
+
+        // function RotateArray(arr) {
+        //     let lastelement = arr[arr.length - 1];
+        //     console.log("lastelement",lastelement);
+
+        //     let resultingArray =[];
+        //     for (let index = 0; index < arr.length -1; index++) {
+        //         resultingArray.push(arr[index])
+
+        //     }
+        //     resultingArray.unshift(lastelement);
+        //     return resultingArray;
+        // }
+
+        function RotateArray(arr) {
+
+            let lastelement = arr[arr.length - 1];
+
+            for (let index = arr.length - 1; index > 0; index--) {
+
+
+                arr[index] = arr[index - 1];
+
+
+            }
+
+            arr[0] = lastelement;
+            return arr;
+
+        }
+
+        const originalArray = [1, 2, 3, 4, 5];
+        const resultedArray = RotateArray(originalArray);
+        console.log('resultedArray', resultedArray)
+    </script>
+</body>
+
+</html>

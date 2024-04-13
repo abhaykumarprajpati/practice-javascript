@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let N = 1331;
+        let duplicate = N;
+        let reverseNum = 0;
+        while (N > 0) {
+            let lastdigit = N % 10;
+            N = Math.floor(N / 10);
+            reverseNum = (reverseNum * 10) + lastdigit
+        }
+        console.log('number', duplicate)
+        if (reverseNum == duplicate) {
+            console.log('it is palindrome')
+        } else {
+            console.log('it is not palindrome')
+        }
+    </script>
+</body>
+
+</html>

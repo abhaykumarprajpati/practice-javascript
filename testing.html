@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const array = [{
+            id: 1,
+            date: "22/03/2024",
+            narration: "narration",
+            amount: "7000",
+            branch: "udyod vihar"
+        }, {
+            id: 2,
+            date: "22/03/2024",
+            narration: "narration",
+            amount: "7000",
+            branch: "udyod vihar"
+        }];
+
+        // Create an empty object
+        const uniqueFieldsObject = {};
+
+        // Iterate through each object in the array
+        array.forEach(obj => {
+            // Iterate through each key in the object
+            Object.keys(obj).forEach(key => {
+                // If the key doesn't exist in the uniqueFieldsObject, add it
+                if (!uniqueFieldsObject.hasOwnProperty(key)) {
+                    uniqueFieldsObject[key] = obj[key];
+                }
+            });
+        });
+
+        console.log(uniqueFieldsObject);
+
+    </script>
+</body>
+
+</html>

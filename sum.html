@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [
+            { id: 1, amount: 300 },
+            { id: 2, amount: 400 },
+        ];
+        let total = arr.reduce((acc, item) => {
+            console.log("acc and item",acc , item)
+             return acc + item.amount 
+            }, 0);
+           
+        // let total = 0;
+        // for (let i = 0; i < arr.length; i++) {
+        //     total = total + arr[i].amount
+        // }
+        console.log("total", total)
+    </script>
+</body>
+
+</html>

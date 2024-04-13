@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const survey = [
+            { name: "Steve", answer: "Yes" },
+            { name: "Jessica", answer: "Yes" },
+            { name: "Peter", answer: "No" },
+            { name: "Elaine", answer: "Yes" }
+        ];
+
+        let allSame = true;
+        const firstAnswer = survey[0].answer;
+
+        for (let i = 1; i < survey.length; i++) {
+            console.log("check")
+            if (survey[i].answer !== firstAnswer) {
+                allSame = false;
+                break;
+            }
+        }
+
+        if (allSame) {
+            console.log("All answers in the survey are the same.");
+        } else {
+            console.log("Not all answers in the survey are the same.");
+        }
+
+    </script>
+</body>
+
+</html>

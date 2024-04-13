@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function longestCommonPrefix(strs) {
+            if (strs.length === 0) return "";
+
+            // Assume the first string as the prefix to start with
+            let prefix = strs[0];
+
+            // Iterate through the rest of the strings
+            for (let i = 1; i < strs.length; i++) {
+                // While the current string doesn't start with the prefix,
+                // shorten the prefix by one character
+                while (strs[i].indexOf(prefix) !== 0) {
+                    prefix = prefix.substring(0, prefix.length - 1);
+                    if (prefix === "") return ""; // If prefix becomes empty, return
+                }
+            }
+
+            return prefix;
+        }
+
+        // Example usage:
+        const strings = ["flower", "flow", "flight"];
+        console.log(longestCommonPrefix(strings)); // Output: "fl"
+        console.log("flow".indexOf("flower"))
+        console.log("flower".indexOf("flow"))
+        console.log("flower".indexOf("flower"))
+
+
+    </script>
+</body>
+
+</html>

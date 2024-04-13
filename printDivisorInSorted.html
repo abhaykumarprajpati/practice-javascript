@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let N = 36;
+        let squareRootOfN = Math.sqrt(N);
+        let arr = [];
+
+        for (let i = 1; i <= squareRootOfN; i++) {
+
+            if (N % i == 0) {
+                arr.push(i)
+                console.log(`divisor of ${N} is ${i}`)
+
+                if (N / i !== i) {
+                    arr.push(N / i)
+                    console.log(`divisor of ${N} is ${N / i}`)
+
+                }
+            }
+
+        }
+        arr.sort((a, b) => a - b); // Numerical sorting
+
+        console.log('sorted array', arr)
+    </script>
+</body>
+
+</html>

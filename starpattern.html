@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // function printstar(n) {
+
+        //     for (i = 0; i < n; i++) {
+        //         for (j = 0; j < n - i; j++) {
+        //             console.log("*" + "")
+        //         }
+        //         console.log('\n')
+        //     }
+
+        // }
+        // function printstar(n) {
+        //     for (let i = 0; i < n; i++) {
+        //         let row = '';
+        //         for (let j = 0; j < n - i; j++) {
+        //             row += '* ';
+        //         }
+        //         console.log(row);
+        //     }
+        // }
+        // function printstar(n) {
+        //     for (let i = 0; i < n; i++) {
+        //         let row = '';
+        //         for (let j = 1; j < n - i + 1; j++) {
+        //             row += j;
+        //         }
+        //         console.log(row);
+        //     }
+        // }
+        // function printstar1(n) {
+
+        //     for (i = 0; i < n; i++) {
+        //         let row = "";
+
+        //         for (j = 0; j < n - i; j++) {
+        //             row = row + " "
+
+        //         }
+        //         for (j = 0; j < 2 * i + 1; j++) {
+        //             row = row + "*"
+        //         }
+        //         for (j = 0; j < n; j++) {
+        //             row = row + " "
+        //         }
+
+        //         console.log(row)
+
+
+
+        //     }
+
+
+        // }
+        // function printstar(n) {
+        //     for (let i = 0; i < n; i++) {
+        //         let row = '';
+        //         for (let j = 0; j < n - i; j++) {
+        //             row += ' ';
+        //         }
+        //         for (let j = 0; j < 2 * i + 1; j++) {
+        //             row += '*';
+        //         }
+        //         for (let j = 0; j < n - i; j++) {
+        //             row += ' ';
+        //         }
+        //         console.log(row);
+        //     }
+        // }
+
+        // function printstar(n) {
+
+        //     for (i = 0; i < n; i++) {
+        //         let row = '';
+        //         for (j = 0; j < i; j++) {
+        //             row = row + " "
+        //         }
+        //         for (j = 0; j < (n - i) * 2 - 1; j++) {
+        //             row = row + "*"
+        //         }
+        //         console.log(row);
+        //     }
+
+        // }  
+
+        // function printstar(n) {
+        //     for (i = 0; i <= 2 * n - 1; i++) {
+        //         let stars = i;
+        //         let row = ''
+        //         if (i > n) {
+        //             stars = 2 * n - i
+        //         }
+        //         for (j = 0; j < stars; j++) {
+        //             row = row + "*"
+        //         }
+        //         console.log(row);
+        //     }
+        // }
+
+        // function printstar(n) {
+        //     for (i = 0; i < n; i++) {
+        //         let start = 1;
+        //         let row = ''
+        //         if (i % 2 == 0) {
+        //             start = 1
+        //         } else {
+        //             start = 0
+        //         }
+        //         for (j = 0; j <= i; j++) {
+        //             row = row + start;
+        //             start = 1 - start
+        //         }
+        //         console.log(row)
+        //     }
+        // }
+        // function printstar(n) {
+
+        //     for (i = 0; i < n; i++) {
+        //         let row = '';
+        //         for (j = 0; j <= i; j++) {
+        //             row = row + (j + 1)
+        //         }
+        //         for (j = 0; j < 2 * (n - (i + 1)); j++) {
+        //             row = row + " "
+        //         }
+        //         // for (j = 0; j <= i; j++) {
+        //         //     row = row + (j + 1)
+        //         // }
+        //         for (j = i; j >= 0; j--) {
+        //             row = row + (j + 1)
+        //         }
+        //         console.log(row)
+        //     }
+
+        // }
+
+        // function printstar(n) {
+        //     let num = 1;
+        //     for (i = 0; i < n; i++) {
+        //         let row = '';
+
+        //         for (j = 0; j <= i; j++) {
+
+        //             row = row + num + " ";
+        //             num = num + 1;
+        //         }
+        //         console.log(row)
+        //     }
+        // }
+
+        // function printAlphabetPattern(n) {
+        //     for (let i = 0; i < n; i++) {
+        //         let row = '';
+        //         for (let j = 0; j <= i; j++) {
+        //             row += String.fromCharCode(65 + j); // 65 is ASCII code for 'A'
+        //         }
+        //         console.log(row);
+        //     }
+        // }
+
+        // function countdigits(n) {
+        //     let count = 0;
+        //     while (n > 0) {
+        //         lastdigit = n % 10;
+        //         count = count + 1;
+        //         n = Math.floor(n / 10);
+        //         console.log("n", n)
+        //         console.log("lastdigit", lastdigit)
+        //     }
+        //     console.log("count", count)
+        //     return count;
+        // }
+
+
+
+        // function reverseNumber(n) {
+        //     let reversenum = 0;
+
+        //     while (n > 0) {
+
+        //         let lastdigit = n % 10;
+        //         n = Math.floor(n / 10)
+        //         reversenum = (reversenum * 10) + lastdigit;
+
+        //     }
+        //     console.log("reversenum", reversenum)
+
+
+
+        // }
+
+        // function palindromeNumber(n) {
+        //     let reversenum = 0;
+        //     let duplicatenum = n;
+        //     while (n > 0) {
+
+        //         let lastdigit = n % 10;
+        //         n = Math.floor(n / 10)
+        //         reversenum = (reversenum * 10) + lastdigit;
+
+        //     }
+        //     console.log("reversenum", reversenum)
+        //     if (duplicatenum == reversenum) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+
+
+        // }
+
+        // function armstrongnumber(n) {
+
+        //     let duplicate = n;
+        //     let sum = 0;
+
+        //     while (n > 0) {
+        //         let lastdigit = n % 10;
+        //         n = Math.floor(n / 10)
+        //         sum = sum + (lastdigit * lastdigit * lastdigit)
+        //     }
+        //     console.log("sum", sum)
+        //     if (sum == duplicate) {
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+
+        // }
+
+        function isPrimenumber(n) {
+            let count = 0;
+            for (i = 1; i <= n; i++) {
+                if (n % i == 0) {
+                    count = count + 1;
+
+                }
+            }
+            console.log("count_fn", count)
+            if (count == 2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+        // const result = countdigits(7789)
+        // const result = countdigits(7789)
+        // const result = reverseNumber(123456)
+        // const result = palindromeNumber(123456)
+        const result = isPrimenumber(109)
+        // const result = armstrongnumber(123)
+        // const result1 = printstar1(5)
+        // const result1 = printAlphabetPattern(5)
+        // const result = printstar(5)
+
+        console.log('result', result)
+        // console.log(String.fromCharCode(65+8))
+
+    </script>
+</body>
+
+</html>

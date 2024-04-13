@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function convertDateFormat(dateString, inputFormat, outputFormat) {
+            // Parse the input date string using the input format
+            const parsedDate = new Date(dateString);
+
+            // Check if the parsing was successful
+            if (isNaN(parsedDate.getTime())) {
+                return "Invalid date";
+            }
+
+            // Format the date using the output format
+            const year = parsedDate.getFullYear();
+            const month = ('0' + (parsedDate.getMonth() + 1)).slice(-2);
+            const day = ('0' + parsedDate.getDate()).slice(-2);
+            const hours = ('0' + parsedDate.getHours()).slice(-2);
+            const minutes = ('0' + parsedDate.getMinutes()).slice(-2);
+            const seconds = ('0' + parsedDate.getSeconds()).slice(-2);
+
+            let formattedDate = outputFormat.replace('YYYY', year)
+                .replace('MM', month)
+                .replace('DD', day)
+                .replace('HH', hours)
+                .replace('mm', minutes)
+                .replace('ss', seconds);
+
+            return formattedDate;
+        }
+
+        // Example usage
+        const dateString = '2024-03-10 14:30:00';
+        const inputFormat = 'YYYY-MM-DD HH:mm:ss';
+        const outputFormat = 'DD-MM-YYYY HH:mm:ss';
+
+        const formattedDate = convertDateFormat(dateString, inputFormat, outputFormat);
+        console.log("Formatted Date:", formattedDate); // Output: "10-03-2024 14:30:00"
+
+    </script>
+</body>
+
+</html>

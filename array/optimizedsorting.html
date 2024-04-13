@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Sortarr(list) {
+            if (!Array.isArray(list) || list.length <= 1) {
+                return list;
+            }
+
+            let swapped;
+            for (let j = 0; j < list.length - 1; j++) {
+                swapped = false;
+                for (let i = 0; i < list.length - 1 - j; i++) {
+                    if (list[i + 1] < list[i]) {
+                        let temp = list[i];
+                        list[i] = list[i + 1];
+                        list[i + 1] = temp;
+                        swapped = true;
+                    }
+                }
+                if (!swapped) {
+                    break;
+                }
+            }
+
+            return list;
+        }
+
+        const arr = [23, 19, 12, 24, 25, 8, 7, 55];
+        const result = Sortarr(arr);
+        console.log("result", result);
+
+    </script>
+</body>
+
+</html>

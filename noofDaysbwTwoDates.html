@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to calculate the number of days between two dates
+        function getDaysDifference(startDate, endDate) {
+            // Convert both dates to milliseconds
+            const startMilliseconds = startDate.getTime();
+            const endMilliseconds = endDate.getTime();
+
+            // Calculate the difference in milliseconds
+            const differenceMilliseconds = Math.abs(endMilliseconds - startMilliseconds);
+
+            // Convert the difference from milliseconds to days
+            const differenceDays = Math.ceil(differenceMilliseconds / (1000 * 60 * 60 * 24));
+
+            return differenceDays;
+        }
+
+        // Example usage
+        const startDate = new Date('2024-03-01'); // Start date
+        const endDate = new Date('2024-03-10');   // End date
+
+        const daysDifference = getDaysDifference(startDate, endDate);
+        console.log("Number of days between the dates:", daysDifference);
+
+    </script>
+</body>
+
+</html>

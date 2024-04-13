@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function largestOddNumber(str) {
+            let largestOdd = -1; // Initialize with -1, indicating no odd number found yet
+
+            // Iterate through each character in the string
+            for (let char of str) {
+                const num = parseInt(char); // Convert the character to a number
+                console.log("chekcing_number", num)
+
+                // Check if the number is valid and odd
+                if (!isNaN(num) && num % 2 !== 0) {
+                    // Update largestOdd if the current number is larger
+                    largestOdd = Math.max(largestOdd, num);
+                }
+            }
+
+            return largestOdd;
+        }
+
+        // Example usage:
+        const str = "abc12345def6789";
+        console.log(largestOddNumber(str)); // Output: 9
+        console.log(!isNaN(6));
+
+    </script>
+</body>
+
+</html>

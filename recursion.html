@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+</head>
+
+<body>
+    <script>
+
+        // (method) Array < { name: string; age: number; } >.sort(compareFn ?: ((a: {
+        //     name: string;
+        //     age: number;
+        // }, b: {
+        //     name: string;
+        //     age: number;
+        // }) => number) | undefined): {
+        //     name: string;
+        //     age: number;
+        // } []
+
+        const studentlist = [
+            { name: "abhay", age: 26 },
+            { name: "ankit", age: 24 },
+            { name: "rahul", age: 29 },
+            { name: "vikaas", age: 22 }
+        ];
+
+        studentlist.sort((a, b) => {
+            // console.log(`a:${a.age} and b:${b.age}`)
+            return b.age - a.age
+        }
+        );
+
+        console.log("studentlist", studentlist);
+
+
+        const points = [40, 100, 1, 5, 25, 10];
+        points.sort(function (a, b) {
+            console.log(`a:${a} and b:${b}`)
+             return a - b 
+            });
+        console.log(" Asc. points", points);
+
+        const points1 = [40, 100, 1, 5, 25, 10];
+        points.sort(function (a, b) { return b - a });
+        console.log("Desc. points1", points1);
+
+        // function print1toN(i, n) {
+
+        //     if (i > n) {
+        //         return;
+        //     }
+        //     console.log('i', i);
+        //     print1toN(i + 1, n)
+
+        // }
+        function print1toNbacktracking(i, n) {
+
+            if (i < 1) {
+                return;
+            }
+
+            print1toNbacktracking(i - 1, n)
+            console.log('i', i);
+
+        }
+
+        // const result = print1toN(1, 4)
+        const result = print1toNbacktracking(3, 3)
+    </script>
+</body>
+
+</html>
